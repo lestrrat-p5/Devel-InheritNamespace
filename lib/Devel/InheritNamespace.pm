@@ -203,7 +203,7 @@ Extra arguments to pass to Module::Pluggable::Object to search for modules.
 
 =back
 
-=head2 C<< $self->all_modules( $main_namespace, @namespaces_to_inherit );
+=head2 C<< $self->all_modules( $main_namespace, @namespaces_to_inherit ) >>;
 
 Loads modules based on the following heuristics:
 
