@@ -1,10 +1,10 @@
-
 package Devel::InheritNamespace;
+
 use Moose;
 use Module::Pluggable::Object;
 use namespace::clean -except => qw(meta);
 
-our $VERSION = '0.00001';
+our $VERSION = '0.00002';
 
 has search_options => (
     is => 'ro',
@@ -78,8 +78,8 @@ sub all_modules {
         my $base_class;
 
         if ($comp_namespace eq $main_namespace ) {
-            if (! Class::MOP::is_class_loaded($comp_class)) {
-                Class::MOP::load_class($comp_class);
+            if (! Class::Load::is_class_loaded($comp_class)) {
+                Class::Load::load_class($comp_class);
             }
         } else {
             $base_class = $comp_class;
@@ -88,13 +88,13 @@ sub all_modules {
             $comp_class =~ s/^$comp_namespace/$main_namespace/;
 
             next if $comps{ $comp_class };
-            eval { Class::MOP::load_class($comp_class) };
+            eval { Class::Load::load_class($comp_class) };
             if (my $e = $@) {
                 if ($e =~ /Can't locate/) {
                     # if the module is NOT found in the current app ($class),
                     # then we build a virtual component. But don't do this
                     # if $base_class is a role
-                    Class::MOP::load_class($base_class);
+                    Class::Load::load_class($base_class);
                     next if $base_class->can('meta') && $base_class->meta->isa('Moose::Meta::Role');
 
                     my $meta = Moose::Meta::Class->create(
