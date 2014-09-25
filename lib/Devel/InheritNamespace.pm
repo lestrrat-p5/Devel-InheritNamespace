@@ -4,7 +4,7 @@ use Moose;
 use Module::Pluggable::Object;
 use namespace::clean -except => qw(meta);
 
-our $VERSION = '0.00002';
+our $VERSION = '0.00003';
 
 has search_options => (
     is => 'ro',
