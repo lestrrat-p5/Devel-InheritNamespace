@@ -4,7 +4,7 @@
       "Daisuke Maki C<< <daisuke@endeworks.jp> >>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v1.1.0, CPAN::Meta::Converter version 2.141520",
+   "generated_by" : "Minilla/v2.2.0, CPAN::Meta::Converter version 2.142690",
    "license" : [
       "perl_5"
    ],
@@ -33,8 +33,6 @@
       },
       "configure" : {
          "requires" : {
-            "CPAN::Meta" : "0",
-            "CPAN::Meta::Prereqs" : "0",
             "Module::Build" : "0.38"
          }
       },
@@ -49,6 +47,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Class::Load" : "0",
             "Module::Pluggable" : "0",
             "Moose" : "0",
             "namespace::clean" : "0"
