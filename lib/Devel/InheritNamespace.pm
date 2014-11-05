@@ -1,5 +1,6 @@
 package Devel::InheritNamespace;
 
+use Class::Load;
 use Moose;
 use Module::Pluggable::Object;
 use namespace::clean -except => qw(meta);
