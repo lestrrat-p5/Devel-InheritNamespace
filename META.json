@@ -66,7 +66,7 @@
          "web" : "https://github.com/lestrrat/Devel-InheritNamespace"
       }
    },
-   "version" : "0.00001",
+   "version" : "0.00003",
    "x_contributors" : [
       "Daisuke Maki <lestrrat+github@gmail.com>"
    ]

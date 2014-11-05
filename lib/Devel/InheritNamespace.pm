@@ -5,7 +5,7 @@ use Module::Pluggable::Object;
 use Class::Load;
 use namespace::clean -except => qw(meta);
 
-our $VERSION = '0.00001';
+our $VERSION = '0.00003';
 
 has search_options => (
     is => 'ro',
