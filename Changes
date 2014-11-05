@@ -1,5 +1,8 @@
 Changes
 =======
 
+{{$NEXT}}
+    - Use Class::Load instead of Class::MOP (#1 and #2)
+
 0.00001 - Oct 02 2009
     - Initial release
